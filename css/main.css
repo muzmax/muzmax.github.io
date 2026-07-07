@@ -5285,6 +5285,72 @@ a.credit {
 .section {
   padding-bottom: 0; }
 
+/* Experience: cards with a thin green accent */
+.cc-accent-card {
+  border-left: 4px solid #378C3F; }
+  .cc-accent-card .card-body p:last-child {
+    margin-bottom: 0; }
+
+.cc-entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap; }
+  .cc-entry-head .h5 {
+    margin-bottom: 0.25rem;
+    margin-right: 1rem; }
+
+.cc-entry-date {
+  color: #888;
+  font-size: 0.9em;
+  white-space: nowrap; }
+
+.cc-entry-org {
+  color: #378C3F;
+  font-weight: 600;
+  margin-bottom: 0.5rem; }
+
+/* Education: vertical timeline */
+.cc-timeline {
+  position: relative;
+  padding-left: 28px; }
+  .cc-timeline::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: #378C3F;
+    opacity: 0.3; }
+
+.cc-timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem; }
+  .cc-timeline-item:last-child {
+    padding-bottom: 0; }
+  .cc-timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #378C3F; }
+  .cc-timeline-item .h5 {
+    margin-bottom: 0.35rem; }
+  .cc-timeline-item p:last-child {
+    margin-bottom: 0; }
+
+.cc-timeline-meta {
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 0.25rem; }
+  .cc-timeline-meta span {
+    color: #378C3F;
+    font-weight: 600; }
+
 /* Grouped skill tags */
 .cc-skills .cc-skill-group {
   margin-bottom: 1.25rem; }
