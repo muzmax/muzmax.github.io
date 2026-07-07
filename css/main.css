@@ -5291,6 +5291,14 @@ a.credit {
   .cc-accent-card .card-body p:last-child {
     margin-bottom: 0; }
 
+.cc-entry-list {
+  padding-left: 1.2rem;
+  margin-bottom: 0; }
+  .cc-entry-list li {
+    margin-bottom: 0.3rem; }
+  .cc-entry-list li:last-child {
+    margin-bottom: 0; }
+
 .cc-entry-head {
   display: flex;
   justify-content: space-between;
