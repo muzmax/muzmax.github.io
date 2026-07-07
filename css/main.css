@@ -5284,3 +5284,16 @@ a.credit {
 /* Common Style */
 .section {
   padding-bottom: 0; }
+
+/* Grouped skill tags */
+.cc-skills .cc-skill-group {
+  margin-bottom: 1.25rem; }
+  .cc-skills .cc-skill-group:last-child {
+    margin-bottom: 0; }
+  .cc-skills .cc-skill-group .h6 {
+    margin-bottom: 0.5rem; }
+  .cc-skills .badge {
+    text-transform: none;
+    font-size: 0.8571em;
+    padding: 5px 12px;
+    margin: 0 4px 6px 0; }
