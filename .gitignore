@@ -1,3 +1,6 @@
 # Large source images kept locally only (the site uses images/sar-header.jpg)
 images/sar_denoised.png
 photo_articles.png
+
+# Overleaf upload archive (regenerate from cv/main.tex)
+cv/*.zip

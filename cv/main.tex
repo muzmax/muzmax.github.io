@@ -1,0 +1,179 @@
+% ------------------------------------------------------------------
+% Max Muzeau — CV
+% One-column, one-page (publications on page 2), dark green palette.
+% Compiles with pdfLaTeX (Overleaf default compiler).
+% ------------------------------------------------------------------
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[a4paper,margin=1.5cm,top=1.2cm,bottom=1.2cm]{geometry}
+\usepackage{XCharter}          % Charter: classic, elegant, prints well
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+% ----- Palette ----------------------------------------------------
+\definecolor{cvgreen}{HTML}{2E7434}   % dark green (headings, accents)
+\definecolor{cvgreenlight}{HTML}{378C3F}
+\definecolor{cvgray}{HTML}{5A5A5A}    % dates, meta text
+\definecolor{cvink}{HTML}{1F241E}     % body text
+
+\color{cvink}
+\hypersetup{colorlinks=true, urlcolor=cvgreen, linkcolor=cvgreen}
+
+% ----- Section style: small caps, green, thin rule ----------------
+\titleformat{\section}
+  {\color{cvgreen}\large\scshape}
+  {}{0em}
+  {}
+  [\vspace{-0.6em}{\color{cvgreenlight}\rule{\textwidth}{0.8pt}}]
+\titlespacing*{\section}{0pt}{1.1em}{0.5em}
+
+% ----- Entry helpers ----------------------------------------------
+% \entry{Title}{Organization}{Dates}
+\newcommand{\entry}[3]{%
+  \noindent\textbf{#1} \,{\color{cvgreen}·}\, {\color{cvgreen}#2}%
+  \hfill {\color{cvgray}\small #3}\par}
+
+% Tight bullet lists
+\setlist[itemize]{leftmargin=1.1em, itemsep=0.1em, topsep=0.2em,
+                  parsep=0pt, label={\color{cvgreenlight}\textbullet}}
+
+\newcommand{\sep}{\;{\color{cvgreenlight}|}\;}
+
+\pagestyle{empty}
+\setlength{\parskip}{0.35em}
+
+\begin{document}
+
+% ================== HEADER ==================
+\begin{center}
+  {\Huge\scshape\color{cvgreen} Max Muzeau}\\[0.45em]
+  {\large Data Scientist \,{\color{cvgreenlight}·}\, ML Engineer}\\[0.5em]
+  {\small
+    \faIcon{map-marker-alt}\ Paris, France \sep
+    \faIcon{envelope}\ \href{mailto:muzeaumax@gmail.com}{muzeaumax@gmail.com} \sep
+    \faIcon{phone}\ +33 6 51 20 15 01\\[0.25em]
+  {\small
+    \faIcon{globe}\ \href{https://muzmax.github.io}{muzmax.github.io} \sep
+    \faIcon{linkedin}\ \href{https://www.linkedin.com/in/max-muzeau}{max-muzeau} \sep
+    \faIcon{github}\ \href{https://github.com/muzmax}{muzmax} \sep
+    \faIcon{graduation-cap}\ \href{https://scholar.google.com/citations?user=66GPGlEAAAAJ}{Google Scholar}}}
+\end{center}
+
+\vspace{-0.3em}
+\noindent Data scientist and ML engineer specialized in \textbf{computer vision} and \textbf{deep learning} for \textbf{earth observation}. PhD from Onera and CentraleSupélec on anomaly detection in SAR images. Now at Geowatch Labs, working at the intersection of research, ML engineering and data engineering.
+
+% ================== EXPERIENCE ==================
+\section{Experience}
+
+\entry{Data Scientist}{Geowatch Labs}{2024 -- Present}
+\begin{itemize}
+  \item Design, adapt and productionize state-of-the-art \textbf{deep learning} and \textbf{computer vision} models for \textbf{satellite image analysis}, mainly agricultural monitoring and climate data.
+  \item Own the full \textbf{R\&D-to-deployment cycle}: from prototyping algorithms to serving them at \textbf{global scale}, processing agricultural fields worldwide.
+  \item Build scalable \textbf{geospatial data pipelines} on \textbf{Google Cloud} (Apache Beam, Dataflow, Airflow), containerized with Docker and orchestrated on Kubernetes.
+  \item Preprocess, analyze and visualize \textbf{geospatial data} (QGIS, GeoPandas).
+\end{itemize}
+
+\entry{PhD Student}{ONERA -- CentraleSupélec}{Oct 2021 -- 2024}
+\begin{itemize}
+  \item \textbf{Anomaly detection} in remote sensing data: \textbf{self-supervised learning} for computer vision, \textbf{contrastive learning} with transformers.
+  \item \textbf{Synthetic Aperture Radar} (SAR) data processing and analysis.
+  \item \textbf{Statistical methods} (a contrario, maximum likelihood estimation) and robust estimation.
+  \item Author of multiple \textbf{scientific publications} (see page 2).
+\end{itemize}
+
+\entry{Computer Science Teacher}{IUT Orsay}{Jan 2022 -- Nov 2023}
+\begin{itemize}
+  \item Taught Python programming and algorithmics to undergraduate students.
+\end{itemize}
+
+\entry{Research Intern in SAR Imagery}{Télécom Paris}{Mar 2021 -- Aug 2021}
+\begin{itemize}
+  \item SAR image denoising with deep learning and signal processing; activity monitoring of an island with Sentinel-1 images in collaboration with the CNES.
+\end{itemize}
+
+\entry{Artificial Intelligence Consultant}{Lanteas}{Aug 2020 -- Feb 2021}
+\begin{itemize}
+  \item Built a deep learning algorithm to predict the profit of municipalities.
+\end{itemize}
+
+% ================== EDUCATION ==================
+\section{Education}
+
+\entry{PhD, Anomaly Detection Schemes for SAR Images}{Université Paris-Saclay}{2021 -- 2024}
+
+\entry{Master OIVM -- AIMA, advanced imaging (SAR, hyperspectral, LIDAR)}{Jean Monnet University}{2020 -- 2021}
+
+\entry{Engineering Degree, computer vision \& signal processing}{Télécom Saint-Étienne}{2018 -- 2021}
+
+\entry{CPGE, intensive undergraduate course in mathematics \& physics}{Lycée Jacques Amyot}{2016 -- 2018}
+
+% ================== SKILLS ==================
+\section{Skills}
+
+\newcommand{\skillrow}[2]{\noindent{\color{cvgreen}\textbf{#1}} \, #2\par}
+
+\skillrow{Languages}{Python, C++, MATLAB}
+\skillrow{ML / Deep learning}{PyTorch, TensorFlow, scikit-learn}
+\skillrow{Cloud \& data pipelines}{Google Cloud, Dataflow, Apache Beam, Airflow}
+\skillrow{MLOps \& deployment}{Docker, Kubernetes, GitHub Actions (CI/CD)}
+\skillrow{Geospatial}{QGIS, GeoPandas, shapely, Fiona, GDAL / rasterio}
+\skillrow{Data}{SQL, BigQuery, pandas}
+\skillrow{Dev tooling}{Poetry, Git, Linux, Bash \hfill {\color{cvgray}\small French (native) · English (fluent)}}
+
+% ================== PUBLICATIONS (page 2) ==================
+\newpage
+\section{Scientific Publications}
+
+% \pub{Title}{Authors — Venue}{URL}
+\newcommand{\pub}[3]{%
+  \noindent\href{#3}{\textbf{#1}}\\
+  {\color{cvgray}\small #2}\par\vspace{0.55em}}
+
+\pub{SAFE: A SAR Feature Extractor Based on Self-Supervised Learning and Masked Siamese ViTs}
+    {M. Muzeau, J. Frontera-Pons, C. Ren, J.-P. Ovarlez --- IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}
+    {https://ieeexplore.ieee.org/document/11517420}
+
+\pub{Anomaly Detection Schemes for SAR Images}
+    {M. Muzeau --- PhD thesis, Université Paris-Saclay}
+    {https://theses.fr/2024UPASG100}
+
+\pub{General Feature Extraction in SAR Target Classification: A Contrastive Learning Approach Across Sensor Types}
+    {M. Muzeau, J. Frontera-Pons, C. Ren, J.-P. Ovarlez --- IGARSS 2024, IEEE International Geoscience and Remote Sensing Symposium}
+    {https://ieeexplore.ieee.org/document/10642123}
+
+\pub{Deep-Learning Based Wall Mitigation Method for Through-the-Wall Radar Imaging}
+    {Y. Boudrouz, M. Muzeau --- 2024 International Radar Conference (RADAR)}
+    {https://ieeexplore.ieee.org/document/10993894}
+
+\pub{On the Impact of Despeckling for Supervised SAR Super-Resolution}
+    {M. Muzeau, C. Ren, J. Fix, F. Brigui, J.-P. Ovarlez --- EUSAR 2024, 15th European Conference on Synthetic Aperture Radar}
+    {https://ieeexplore.ieee.org/document/10659568}
+
+\pub{Self-Supervised SAR Anomaly Detection Guided with RX Detector}
+    {M. Muzeau, C. Ren, S. Angelliaume, M. Datcu, J.-P. Ovarlez --- IGARSS 2023, IEEE International Geoscience and Remote Sensing Symposium}
+    {https://ieeexplore.ieee.org/document/10283391}
+
+\pub{Apprentissage auto-supervisé guidé statistiquement pour la détection d'anomalies en imagerie SAR}
+    {M. Muzeau, C. Ren, D. Mihai, J.-P. Ovarlez --- GRETSI 2023}
+    {https://hal.science/hal-04248060/document}
+
+\pub{Self-Supervised Learning Based Anomaly Detection in Synthetic Aperture Radar Imaging}
+    {M. Muzeau, C. Ren, S. Angelliaume, M. Datcu, J.-P. Ovarlez --- IEEE Open Journal of Signal Processing, vol. 3, pp. 440--449}
+    {https://ieeexplore.ieee.org/document/9987646}
+
+\pub{SAR Anomalies Detection Based on Deep Learning}
+    {M. Muzeau, C. Ren, S. Angelliaume, M. Datcu, J.-P. Ovarlez --- XXVIII\`eme Colloque GRETSI 2022}
+    {https://centralesupelec.hal.science/hal-03790615/document}
+
+\pub{Self-Supervised Training Strategies for SAR Image Despeckling with Deep Neural Networks}
+    {E. Dalsasso, L. Denis, M. Muzeau, F. Tupin --- EUSAR 2022, 14th European Conference on Synthetic Aperture Radar}
+    {https://ieeexplore.ieee.org/document/9944342}
+
+\end{document}
