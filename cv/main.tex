@@ -117,15 +117,21 @@
 % ================== SKILLS ==================
 \section{Skills}
 
-\newcommand{\skillrow}[2]{\noindent{\color{cvgreen}\textbf{#1}} \, #2\par}
+\newcommand{\skillrow}[2]{\noindent{\color{cvgreen}\textbf{#1}} \, #2\par\vspace{0.3em}}
 
-\skillrow{Languages}{Python, C++, MATLAB}
-\skillrow{ML / Deep learning}{PyTorch, TensorFlow, scikit-learn}
-\skillrow{Cloud \& data pipelines}{Google Cloud, Dataflow, Apache Beam, Airflow}
-\skillrow{MLOps \& deployment}{Docker, Kubernetes, GitHub Actions (CI/CD)}
-\skillrow{Geospatial}{QGIS, GeoPandas, shapely, Fiona, GDAL / rasterio}
-\skillrow{Data}{SQL, BigQuery, pandas}
-\skillrow{Dev tooling}{Poetry, Git, Linux, Bash \hfill {\color{cvgray}\small French (native) · English (fluent)}}
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+  \skillrow{Languages}{Python, C++, MATLAB}
+  \skillrow{ML / Deep learning}{PyTorch, TensorFlow, scikit-learn}
+  \skillrow{Cloud \& data pipelines}{Google Cloud, Dataflow, Apache Beam, Airflow}
+  \skillrow{MLOps \& deployment}{Docker, Kubernetes, GitHub Actions (CI/CD)}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \skillrow{Geospatial}{QGIS, GeoPandas, shapely, Fiona, GDAL / rasterio}
+  \skillrow{Data}{SQL, BigQuery, pandas}
+  \skillrow{Dev tooling}{Poetry, Git, Linux, Bash}
+  \skillrow{Spoken languages}{French (native), English (fluent)}
+\end{minipage}
 
 % ================== PUBLICATIONS (page 2) ==================
 \newpage
